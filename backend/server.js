@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL || 'https://counselling-website-7qzb.vercel.app/',
   credentials: true
 }));
 
@@ -42,6 +42,6 @@ app.use('*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
-  console.log(`🎯 Quiz API: http://localhost:${PORT}/api/quiz`);
+  console.log(`📊 Health check: https://counselling-website-7qzb.vercel.app/${PORT}/health`);
+  console.log(`🎯 Quiz API: https://counselling-website-7qzb.vercel.app/${PORT}/api/quiz`);
 });
